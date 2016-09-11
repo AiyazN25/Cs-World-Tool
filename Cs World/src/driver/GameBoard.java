@@ -13,6 +13,7 @@ public class GameBoard {
   public int NUMCARDSIN2PILE = 15;
   public int NUMCARDSIN1PILE = 20;
   public int PLAYERLIFEPOINTS = 10;
+  public int NUMCARDSINHANDSTARTOFF = 5;
   // Board is going to have 10 zones, 5 for each of the 2 players
   public Player playerOne = new Player(PLAYERLIFEPOINTS);
   public ArrayList<Zone> playerOneZonesList = new ArrayList<Zone>();
@@ -35,8 +36,8 @@ public class GameBoard {
   public Zone p2LT = new Zone(2);
   // In addition, we'll put the hands of each of the players as part of the
   // board too for now
-  public ArrayList<Card> p1Hand = new ArrayList<Card>();
-  public ArrayList<Card> p2Hand = new ArrayList<Card>();
+  public Deck p1Hand = new Deck(NUMCARDSINHANDSTARTOFF);
+  public Deck p2Hand = new Deck(NUMCARDSINHANDSTARTOFF);
   // And the decks of both players too (since we're just testing, this means we
   // can "see" the whole deck)
   // 1 piles:
@@ -105,6 +106,11 @@ public class GameBoard {
     commandMap.put("DisplayHand", "DisplayHand");
     commandMap.put("PrepPlayer", "PrepPlayer");
     commandMap.put("ListCommands", "ListCommands");
+    commandMap.put("PutNewCard", "PutNewCard");
+    commandMap.put("GetDeckSize", "GetDeckSize");
+    commandMap.put("SetDeckSize", "SetDeckSize");
+    commandMap.put("GetAC", "GetAC");
+    commandMap.put("SetAC", "SetAC");
     return commandMap;
   }
 
