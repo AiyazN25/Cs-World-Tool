@@ -105,6 +105,7 @@ public class GameBoard {
     commandMap.put("DisplayHand", "DisplayHand");
     commandMap.put("PrepPlayer", "PrepPlayer");
     commandMap.put("ListCommands", "ListCommands");
+    commandMap.put("CardStorage", "CardStorage");
     return commandMap;
   }
 
