@@ -14,23 +14,28 @@ public class GameBoard {
   public int NUMCARDSIN1PILE = 20;
   public int PLAYERLIFEPOINTS = 10;
   public int NUMCARDSINHANDSTARTOFF = 5;
+  public int NUMZONESINFL = 3;
+  public int NUMZONESINRW = 2;
+  public int NUMZONESINLW = 2;
+  public int NUMZONESINRT = 1;
+  public int NUMZONESINLT = 1;
   // Board is going to have 10 zones, 5 for each of the 2 players
   public Player playerOne = new Player(PLAYERLIFEPOINTS);
   public ArrayList<Zone> playerOneZonesList = new ArrayList<Zone>();
   public Player playerTwo = new Player(PLAYERLIFEPOINTS);
   public ArrayList<Zone> playerTwoZonesList = new ArrayList<Zone>();
   // FrontLines
-  public Zone p1FL = new Zone(3);
-  public Zone p2FL = new Zone(3);
+  public Zone p1FL = new Zone(NUMZONESINFL);
+  public Zone p2FL = new Zone(NUMZONESINFL);
   // RightWings
-  public Zone p1RW = new Zone(2);
-  public Zone p2RW = new Zone(2);
+  public Zone p1RW = new Zone(NUMZONESINRW);
+  public Zone p2RW = new Zone(NUMZONESINRW);
   // LeftWings
-  public Zone p1LW = new Zone(2);
-  public Zone p2LW = new Zone(2);
+  public Zone p1LW = new Zone(NUMZONESINLW);
+  public Zone p2LW = new Zone(NUMZONESINLW);
   // RightTails
-  public Zone p1RT = new Zone(2);
-  public Zone p2RT = new Zone(2);
+  public Zone p1RT = new Zone(NUMZONESINRT);
+  public Zone p2RT = new Zone(NUMZONESINRT);
   // LeftTails
   public Zone p1LT = new Zone(2);
   public Zone p2LT = new Zone(2);
